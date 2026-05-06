@@ -5,6 +5,9 @@ def find_and_replace(lst, find_val, replace_val):
     - lst must be a list.
     - Return the modified list.
     """
+    if not isinstance(lst, list):   # checks if lst is a list
+        return "error"              # returns error if lst is not a list
+        
     for i in range(len(lst)): #iterates through the specified list
         if lst[i] == find_val: #checks each item in list against find_val
             lst[i] = replace_val #if lst[i] matches find_val, replaces lst[i] with replace_val
